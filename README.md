@@ -143,7 +143,7 @@ python3 bench.py open --rps 5000 --duration 20 --concurrency 1200 --repeat 3 --w
 ```
 or (quickest)
 ```bash
-# Starts ther server on 127.0.0.1:8000 by default
+# Starts the server on 127.0.0.1:8000 by default
 python3 minimal_server.py
 
 # Launches benchmark in preset mode with default config file and standard profile
