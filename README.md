@@ -103,8 +103,6 @@ python3 bench.py --config bench_config.json preset --profile standard
 }
 ```
 
-> Tip: Make the **open-loop concurrency cap** configurable here if you plan to test on very large servers.
-
 ---
 
 ## 4) CSV output
