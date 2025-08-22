@@ -1,6 +1,6 @@
 # Minimal Async HTTP Server + Benchmark (Python, stdlib-only)
 
-A tiny **async HTTP server** plus a **performance benchmark** written in **pure Python 3** (no third-party deps). Built to satisfy a test task:
+A  **async HTTP server** plus a **performance benchmark** written in **pure Python 3** (no third-party deps). Built to satisfy a test task:
 
 - Standard library only
 - Platform-independent
@@ -34,7 +34,7 @@ It accepts many concurrent connections, reads headers (with a short timeout), re
 Run:
 
 ```bash
-python3 async_server_tiny.py --host 127.0.0.1 --port 8000
+python3 minimal_server.py --host 127.0.0.1 --port 8000
 ```
 
 ---
@@ -120,7 +120,7 @@ A run-level timestamp is included as a **batch marker** (so all rows from one ru
 
 ## 5) Design choices (brief)
 
-- **Server:** intentionally tiny; responds with valid HTTP and closes. Fits the “less code, the better” goal.
+- **Server:** intentionally ; responds with valid HTTP and closes. Fits the “less code, the better” goal.
 - **Closed-loop vs Open-loop:** both are provided. Closed-loop measures capacity under backpressure; open-loop probes stability at and above capacity.
 - **Calibration:** `preset` first sweeps concurrency, picks the best by **median throughput** (robust to noise), then tests open-loop at ≈50%, ≈90%, ≈110% of that rate to show underload, near-knee, and slight overload behavior.
 - **Safety guards:** open-loop uses a semaphore + small backlog limit to avoid unbounded task growth in the client.
